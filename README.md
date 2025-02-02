@@ -108,4 +108,12 @@ By combining these strategies, systems can handle very large datasets of embeddi
 ## Final Notes:
 The entire code for this project is stored in the "final_submission.py" file. I had initially tried splitting it up into multiple files as the instructions seemed to suggest, but it did not work out for me at all. That is what all the extra files in the repository are about. Investigate at your own peril. In order to get the program to work, I made some edits as described above. The program works as follows:
 
-I'm not sure if something is wrong with my computer or if you've just got a super teacher computer, but everything in VS code seemed to run at a snails pace compared to yours in lecture. This was the worst part of the project, especially when ChatGPT led me astray and I had to refactor many times.
+1. Strips and splits the txt file into manageable chunks at new lines.
+2. Generates embeddings for each of the individual chunks (using the all-MiniLM-L6-v2 model).
+3. Prompts the user for a query.
+4. Embeds the query (using the same embedding model).
+5. Finds and ranks chunks with similar embeddings to the query using cosine similarity.
+6. Generates a response based on the most similar chunk(s) (using the google/flan-t5-small model).
+
+I'm not sure if something is wrong with my computer or if you've just got a super teacher computer, but everything in VS code seemed to run at a snails pace compared to yours in lecture. This was the worst part of the project, especially when ChatGPT led me astray and I had to refactor many times. This was the hardest project in this class for me due to this, but also likely due to lack of sleep this week...
+Overall, it was very informative, locking in and expanding upon some of the information in the 3blue1brown videos we watched at the beginning of the class. Thanks for the experience this month!
